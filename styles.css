@@ -1,1 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #E4EAF2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
 
+.toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #084da6;
+  color: #E4EAF2;
+  text-align: center;
+  font-size: 12px;
+  z-index: 1000;
+}
+
+.testimonials {
+  margin-top: 80px; /* This should be equal or more than the height of the toolbar */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.testimonial {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #91B7D9;
+  transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.testimonial h3 {
+   margin-top: 10px;
+   font-size: 18px;
+   color: #26282a;
+ }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.testimonials::-webkit-scrollbar {
+  display: none;
+}
+.testimonial p {
+  font-size: 16px;
+  color: #020202;
+}
+.testimonial:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #B9D1F1;
+}
+@media (max-width: 600px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+}
