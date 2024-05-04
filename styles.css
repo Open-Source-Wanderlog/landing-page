@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #084DA6;
+    background-color: #E4EAF2;
+}
+
+nav#toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    background-color: #035AA6;
+    padding: 10px 0;
+}
+
+#logo {
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav#toolbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 1%;
+}
+
+nav#toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav#toolbar ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav#toolbar ul li a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+}
+
+nav#toolbar ul li a:hover {
+    background-color: #084DA6;
+    color: white;
+}
+
+nav#toolbar ul li a:active {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav#toolbar ul li a.login-button {
+    color: #084DA6;
+    background-color: white;
+}
+
+nav#toolbar ul li a.login-button:hover {
+    color: white;
+    background-color: #084DA6;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #3B82BF;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #91B7D9;
+    padding: 20px;
+    text-align: center;
+    color: #E4EAF2;
+}
+
+footer .copyright {
+    font-size: 0.8em;
+    color: #E4EAF2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    width: 20%;
+    align-self: center;
+}
+
+form input[type="submit"]:hover {
+    background-color: #084DA6;
+    color: white;
+}
+
+form input[type="submit"]:active {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    nav#toolbar ul {
+        flex-direction: column;
+    }
+    form input[type="submit"] {
+        width: 80%;
+        padding: 15px 30px;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #084DA6;
+}
+
+input[type="submit"] {
+    background-color: #084DA6;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+footer .social-icons a {
+    color: #E4EAF2;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #3B82BF; 
+}
