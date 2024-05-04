@@ -60,6 +60,33 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   background-color: #B9D1F1;
 }
+
+#about-button, #about-us-button {
+  display: block;
+  width: 200px; /* Aumentar el tamaño del botón */
+  margin: 20px auto; /* Agregar margen alrededor del botón */
+  padding: 15px 25px; /* Aumentar el padding para un botón más grande */
+  font-size: 20px;
+  color: #fff;
+  background-color: #2b4b9d; /* Cambiar el color del botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#about-button:hover, #about-us-button:hover {
+  background-color: #91B7D9; /* Cambiar el color del botón al pasar el mouse */
+}
+
+#about-content {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#about-content.show {
+  opacity: 1;
+}
 @media (max-width: 600px) {
   .testimonials {
     grid-template-columns: 1fr;
