@@ -9,24 +9,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
-
-
 <body>
-
     <nav id="toolbar">
         <img src="img/logo.png" alt="logo" width="200px" style="padding: 10px" />
-        <button class="hamburger">&#9776;</button>
         <div class="nav-links">
             <ul>
-                <li><a href="#about-us">About Us</a></li>
+               <li><a href="#about-us">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#contact" class="login-button">Log in</a></li>
-            </ul>
-        </div>
-
+          </ul>
+      </div>
     </nav>
+
+    <button id="sidebar-button">&#9776;</button>
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="login-button">Log in</a></li>
+        </ul>
+    </div>
 
     <section class="major">
         <div class="frase">
@@ -46,6 +53,7 @@
             </p>
         </div>
     </section>
+
     <section id="about-startup">
         <section class="about-startup">
             <div id="about-content" style="display: none">
@@ -165,8 +173,9 @@
             </div>
         </div>
     </section>
+
     <section id="testimonials">
-        <h2 style="text-align: center; font-size: 30px">Testimonials</h2>
+        <h2 style="text-align: center; font-size: 30px">TESTIMONIALS</h2>
         <section class="testimonials">
             <div class="testimonial">
                 <img src="img/jaime.jpg" alt="Imagen de Jaime Rosales" />
@@ -215,9 +224,10 @@
             </div>
         </section>
     </section>
+
     <section id="news-subscription">
         <div class="subscriptionContainer">
-            <h2 style="text-align: center ">News</h2>
+            <h2 style="text-align: center ">NEWS</h2>
             <p>
                 Do you want to receive the most relevant news about flights and
                 exclusive discounts to your email?
@@ -228,34 +238,28 @@
                 <input type="submit" value="Send" />
             </form>
         </div>
-
     </section>
 
     <section class="section-contacto" id="contact">
         <div class="contacto">
-            <div>
-                <h2 class="title-contacto">CONTACT US</h2>
-            </div>
+            <h2 class="title-contacto">CONTACT US</h2>
             <div class="content-contacto">
-                <div class="correos">
-                    <h3>Mail</h3>
-                    <ul>
-                        <li>WanderLogAdmin@gmail.com</li>
-                        <li>WanderLogAdmin@gmail.com</li>
-                    </ul>
-                </div>
-                <div class="telefonos">
-                    <h3>Phones</h3>
-                    <ul>
-                        <li>999999999</li>
-                        <li>999999999</li>
-                    </ul>
-                </div>
-                <div class="direccion">
-                    <h3>Address</h3>
-                    <ul>
-                        <li>Av Brasil 840</li>
-                    </ul>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:WanderLogAdmin@gmail.com">info@wanderlog.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p><a href="tel:999999999">999999999</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>Av. Gral. Salaverry 2255, San Isidro 15076</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -275,6 +279,7 @@
         <p class="copyright">Medina Chocce Karito Dianeth - U20221C769</p>
         <p class="copyright">All the rights are reserved</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 

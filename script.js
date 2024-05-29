@@ -62,7 +62,6 @@ function formValidation() {
         } else {
             document.querySelector('form').insertAdjacentHTML('beforeend', '<p class="feedback" style="color: green;">Thank you for subscribing!</p>');
             var successMessage = document.createElement('p');
-            successMessage.textContent = 'Form submitted successfully!';
             document.body.appendChild(successMessage);
             clearForm();
         }
@@ -90,11 +89,14 @@ function validateEmail(email) {
 smoothScrolling();
 formValidation();
 
-document.querySelector('.hamburger').addEventListener('click', function() {
-  var navLinks = document.querySelector('.nav-links');
-  if (navLinks.style.display === 'none') {
-      navLinks.style.display = 'flex';
-  } else {
-      navLinks.style.display = 'none';
-  }
+
+document.getElementById('sidebar-button').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.toggle('open');
 });
+
+var sidebarLinks = document.querySelectorAll('#sidebar a');
+for (var i = 0; i < sidebarLinks.length; i++) {
+    sidebarLinks[i].addEventListener('click', function() {
+        document.getElementById('sidebar').classList.remove('open');
+    });
+}
