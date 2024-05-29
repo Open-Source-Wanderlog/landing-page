@@ -1,4 +1,10 @@
-
+:root {
+    --lightBlue: #EEF5FF;
+    --skyblue: #D0E4FF;
+    --purple: #004AAD;
+    --black: #000000;
+    --rose: #3B82BF;
+}
 
 
 body {
@@ -6,8 +12,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #084DA6;
-    background-color: #E4EAF2;
+    color: var(--purple);
+    background-color: var(--lightBlue);
 }
 
 nav#toolbar {
@@ -15,8 +21,45 @@ nav#toolbar {
     justify-content: space-between;
     align-items: center;
     top: 0;
-    background-color: #035AA6;
+    background-color: var(--lightBlue);
     padding: 10px 0;
+    color: var(--black);
+}
+
+@media (max-width: 500px) {
+    #toolbar img {
+        width: 120px;
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    .nav-links li {
+        margin-bottom: 30px;
+    }
+    .nav-links a {
+        font-size: 14px;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 #logo {
@@ -37,6 +80,13 @@ nav#toolbar {
     align-items: center;
 }
 
+@media (max-width: 500px) {
+    nav#toolbar {
+        justify-content: space-evenly;
+    }
+
+}
+
 #logo {
     height: 50px;
     margin-left: 10px;
@@ -48,7 +98,6 @@ nav#toolbar ul {
 }
 
 nav#toolbar ul li a {
-    color: white;
     text-decoration: none;
     background-color: transparent;
     padding: 10px 20px;
@@ -59,7 +108,7 @@ nav#toolbar ul li a {
 }
 
 nav#toolbar ul li a:hover {
-    background-color: #084DA6;
+    background-color: var(--purple);
     color: white;
 }
 
@@ -68,13 +117,17 @@ nav#toolbar ul li a:active {
 }
 
 nav#toolbar ul li a.login-button {
-    color: #084DA6;
+    color: var(--purple);
     background-color: white;
 }
 
 nav#toolbar ul li a.login-button:hover {
     color: white;
-    background-color: #084DA6;
+    background-color: var(--purple);
+}
+
+nav#toolbar a {
+    color: var(--black);
 }
 
 section {
@@ -82,7 +135,7 @@ section {
 }
 
 section h2 {
-    color: #3B82BF;
+    color: var(--rose);
     margin-bottom: 10px;
 }
 
@@ -101,6 +154,7 @@ footer .copyright {
 form {
     display: flex;
     flex-direction: column;
+
 }
 
 form label {
@@ -116,10 +170,16 @@ form input[type="submit"] {
     margin: 5px;
     width: 20%;
     align-self: center;
+
+}
+
+input {
+    border: none;
+    padding: 10px;
 }
 
 form input[type="submit"]:hover {
-    background-color: #084DA6;
+    background-color: var(--purple);
     color: white;
 }
 
@@ -131,6 +191,7 @@ form input[type="submit"]:active {
     nav#toolbar ul {
         flex-direction: column;
     }
+
     form input[type="submit"] {
         width: 80%;
         padding: 15px 30px;
@@ -145,11 +206,11 @@ button {
 }
 
 button:hover {
-    background-color: #084DA6;
+    background-color: var(--purple);
 }
 
 input[type="submit"] {
-    background-color: #084DA6;
+    background-color: var(--purple);
 }
 
 footer .social-icons {
@@ -165,11 +226,68 @@ footer .social-icons a {
 }
 
 footer .social-icons a:hover {
-    color: #3B82BF; 
+    color: var(--rose);
 }
+
 * {
     margin: 0;
     font-family: "Open Sans", sans-serif;
+}
+
+#news-subscription {
+    background-color: var(--skyblue);
+}
+
+.subscriptionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 60%;
+    margin: 0 auto;
+
+
+}
+
+.subscriptionContainer p {
+    text-align: center;
+}
+
+.major {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--skyblue);
+    color: var(--black);
+}
+
+.frase {
+    width: 50%;
+    text-align: center;
+}
+
+.imageMajor {
+    background-image: url(img/avion4.png);
+    width: 50%;
+    /* Cambia esto */
+    height: 400px;
+    background-size: cover;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .major {
+        flex-direction: column;
+    }
+
+    .frase,
+    .imageMajor {
+        width: 100%;
+    }
+
+    .frase {
+        padding: 20px;
+    }
 }
 
 .section-service {
@@ -180,25 +298,27 @@ footer .social-icons a:hover {
     align-items: center;
     justify-content: center;
 }
+
 .section-service-all {
     display: flex;
     width: 80%;
     gap: 40px;
 }
+
 .package-complete {
-    background-color: #004AAD;
+    background-color: var(--purple);
     padding: 10px;
     color: white;
     width: 50%;
     margin: 0 auto;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
-    transition: transform 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
     margin-bottom: 40px;
 }
 
 .package-complete:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .title-service {
@@ -207,9 +327,11 @@ footer .social-icons a:hover {
     font-weight: bold;
     margin-bottom: 30px;
 }
+
 .title-package {
     text-align: center;
 }
+
 .type-packages {
     display: flex;
     align-items: center;
@@ -222,6 +344,7 @@ footer .social-icons a:hover {
     color: black;
     border-radius: 20px;
 }
+
 .package-content {
     background-color: #E6E0F8;
     padding: 10px;
@@ -230,20 +353,25 @@ footer .social-icons a:hover {
     height: auto;
 }
 
+
+
 /* Contactanos */
 
 .section-contacto {
     padding: 50px;
     background-color: #EEF5FF;
 }
+
 .contacto {
     width: 80%;
     margin: 0 auto;
 }
+
 .title-contacto {
     margin-bottom: 20px;
     text-align: center;
 }
+
 .content-contacto {
     display: flex;
     gap: 50px;
@@ -254,7 +382,7 @@ footer .social-icons a:hover {
 .img {
     max-width: 100%;
     height: auto;
-    display: block; 
+    display: block;
 }
 
 
@@ -262,17 +390,30 @@ footer .social-icons a:hover {
     .type-packages {
         flex-direction: column;
     }
+
     .section-service-all {
         flex-direction: column;
     }
+
     .package-complete {
         width: 80%;
     }
+
     .package-content {
         width: 80%;
     }
+
     .content-contacto {
         flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .package-complete {
+        width: 100%;
+    }
+    .package-content{
+        width: 100%;
+    
     }
 }
 
@@ -286,12 +427,13 @@ footer .social-icons a:hover {
     margin: 0;
     padding: 0;
 }
-  
+
 body {
     background-color: #f2efdc;
-    min-width: 400px;
+    
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -314,6 +456,15 @@ h3 {
     padding: 30px 0 30px 0;
 }
 
+.aboutUs p {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#collaborators {
+    padding: 0;
+}
+
 .box-company-team {
     padding: 50px 50px;
     display: flex;
@@ -321,109 +472,135 @@ h3 {
     justify-content: center;
     align-items: center;
     gap: 10px;
-  }
-  
-  .box-company-team-developer {
-    text-align: center;
-  }
+    background-color: var(--purple);
+    color: white;
+}
 
-  .team-item {
+.box-company-team-developer {
+    text-align: center;
+}
+
+.team-item {
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  #item-image {
+}
+
+#item-image {
     border-radius: 16px;
     box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.3);
-  }
+}
 
 
-  /* Fernando */
+/* Fernando */
 
 
-  
-  .toolbar {
+
+.toolbar {
     position: fixed;
     top: 0;
     width: 100%;
     padding: 10px;
-    background-color: #084da6;
+    background-color: var(--purple);
     color: #E4EAF2;
     text-align: center;
     font-size: 12px;
     z-index: 1000;
-  }
-  
-  .testimonials {
-    margin-top: 80px; /* This should be equal or more than the height of the toolbar */
+}
+
+.testimonials {
+    margin-top: 80px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    width: 80%;
+    margin: 0 auto;
     padding: 20px;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
-  }
-  
-  .testimonial {
+
+}
+
+#testimonials {
+    background-color: var(--lightBlue);
+}
+
+.testimonial {
     flex: 0 0 auto;
-    margin-right: 20px;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #91B7D9;
     transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
-  }
-  .testimonial h3 {
-     margin-top: 10px;
-     font-size: 18px;
-     color: #26282a;
-   }
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .testimonials::-webkit-scrollbar {
+}
+
+.testimonial h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #26282a;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.testimonials::-webkit-scrollbar {
     display: none;
-  }
-  .testimonial p {
+}
+
+.testimonial p {
     font-size: 16px;
-    color: #020202;
-  }
-  .testimonial:hover {
+    color: var(--black);
+}
+
+.testimonial:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     background-color: #B9D1F1;
-  }
-  
-  #about-button, #about-us-button {
+}
+
+#about-startup {
+    background-color: var(--lightBlue);
+}
+
+#about-button,
+#about-us-button {
     display: block;
-    width: 200px; /* Aumentar el tamaño del botón */
-    margin: 20px auto; /* Agregar margen alrededor del botón */
-    padding: 15px 25px; /* Aumentar el padding para un botón más grande */
+    width: 200px;
+    /* Aumentar el tamaño del botón */
+    margin: 20px auto;
+    /* Agregar margen alrededor del botón */
+    padding: 15px 25px;
+    /* Aumentar el padding para un botón más grande */
     font-size: 20px;
     color: #fff;
-    background-color: #2b4b9d; /* Cambiar el color del botón */
+    background-color: #2b4b9d;
+    /* Cambiar el color del botón */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  #about-button:hover, #about-us-button:hover {
-    background-color: #91B7D9; /* Cambiar el color del botón al pasar el mouse */
-  }
-  
-  #about-content {
+}
+
+#about-button:hover,
+#about-us-button:hover {
+    background-color: #91B7D9;
+    /* Cambiar el color del botón al pasar el mouse */
+}
+
+#about-content {
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
-  }
-  
-  #about-content.show {
-    opacity: 1;
-  }
-  @media (max-width: 600px) {
-    .testimonials {
-      grid-template-columns: 1fr;
-    }
-  }
+}
 
+#about-content.show {
+    opacity: 1;
+}
+
+@media (max-width: 1000px) {
+    .testimonials {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .testimonials {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
