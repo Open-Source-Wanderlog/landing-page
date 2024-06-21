@@ -100,3 +100,14 @@ for (var i = 0; i < sidebarLinks.length; i++) {
         document.getElementById('sidebar').classList.remove('open');
     });
 }
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6P2Y3Z7NZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X6P2Y3Z7NZ');
+</script>
